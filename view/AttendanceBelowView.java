@@ -16,8 +16,9 @@ public class AttendanceBelowView implements AttendanceView {
                 if(entry.getValue() == true)  count++;
             }
             if ((double)count/student.getAttendance().size()<=0.25) {
-                System.out.println("Студент с посещаемостью ниже 25%\n" + student);
+                System.out.println("Студент с посещаемостью ниже 25% " + student.getName() + "\n");
             }
+            
         }
         
     }

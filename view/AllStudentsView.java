@@ -15,7 +15,8 @@ public class AllStudentsView implements AttendanceView {
             for (Map.Entry<LocalDate,Boolean> entry : student.getAttendance().entrySet()) {
                 if(entry.getValue() == true)  count++;
             }
-            System.out.println((double)count/student.getAttendance().size()*100 + "%\n");
+            System.out.print("Студент "+student.getName()+ " с посещаемостью = ");
+            System.out.print((double)count/student.getAttendance().size()*100 + "%\n");
         }
         
     }
