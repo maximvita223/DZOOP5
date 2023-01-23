@@ -5,9 +5,8 @@ import java.util.Map;
 import model.AttendanceService;
 import model.Student;
 import presenter.Presenter;
-import view.AllStudentsView;
-import view.AttendanceBelowView;
-import view.AttendanceSort;
+import view.AttendanceView;
+
 
 
     public class Main{
@@ -27,16 +26,8 @@ import view.AttendanceSort;
                 LocalDate.of(2023, 1, 12) , true))
                 )
             ); 
-        AllStudentsView view1 = new AllStudentsView();
-
-        AttendanceBelowView view2 = new AttendanceBelowView();
-
-        AttendanceSort view3 = new AttendanceSort();
-        Presenter presenter1 = new Presenter(view1, serv);
-        presenter1.run();
-        Presenter presenter2 = new Presenter(view2, serv);
-        presenter2.run();
-        Presenter presenter3 = new Presenter(view3, serv);
-        presenter3.run();        
+        AttendanceView view = new AttendanceView();
+        Presenter pr = new Presenter(view, serv);
+        pr.run();
         }
     }
